@@ -22,7 +22,7 @@ using namespace std;
 
 #define pb push_back
 #define all(v) v.begin(),v.end()
-#define sz  size() 
+#define sz  size()
 #define loop(i,m) for(ui i=0;i<m;i++)
 #define loop2(i,m) for(i=0;i<m;i++)
 #define loop4m(i,x,m) for(ui i=x;i<m;i++)
@@ -51,18 +51,18 @@ int LinearTravellingSalesman::findMinimumDistance(vector <int> x, vector <int> y
 	int maxx , maxy,minx,miny;
 	maxx=0;
 	maxy=0;
-	
+
 	minx=INT_MAX;
 	miny=INT_MAX;
-	
+
 	loop(i,x.sz){
 		if(x[i] > maxx) maxx = x[i];
 		if(y[i] > maxy) maxy = y[i];
-		
+
 		if(x[i] < minx) minx = x[i];
 		if(y[i] < miny) miny = y[i];
 	}
-	
+
 	return abs(maxx-minx)+abs(maxy-miny);
 }
 
@@ -196,27 +196,27 @@ double test4() {
 int main() {
 	int time;
 	bool errors = false;
-	
+
 	time = test0();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test1();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test2();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test3();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test4();
 	if (time < 0)
 		errors = true;
-	
+
 	if (!errors)
 		cout <<"You're a stud (at least on the example cases)!" <<endl;
 	else

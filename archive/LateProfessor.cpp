@@ -21,7 +21,7 @@ using namespace std;
 
 #define pb push_back
 #define all(v) v.begin(),v.end()
-#define sz  size() 
+#define sz  size()
 #define loop(i,m) for(ui i=0;i<m;i++)
 #define loop2(i,m) for(i=0;i<m;i++)
 #define loop4m(i,x,m) for(ui i=x;i<m;i++)
@@ -49,12 +49,12 @@ double LateProfessor::getProbability(int wtt, int wkt, int lt, int ba, int wa) {
 
 	int term2 = 0;//the value of walk time in the professer intervales
 	int term3 = wa - ba ;
-	
+
 	int start,last;
-	
+
 	for(int i = wtt ; i <= wa ; i += wkt+wtt ){
 		if(ba < i || ba < i + wkt ){
-		
+
 			last = (wa > i + wkt) ? i + wkt : wa;
 			start = (ba < i) ? i : ba;
 			if( (ba >= i && ba <= i+wkt ) && ( wa >= i && wa <= i+wkt ) ){
@@ -68,7 +68,7 @@ double LateProfessor::getProbability(int wtt, int wkt, int lt, int ba, int wa) {
 				else
 					return 0.0;
 			}
-			
+
 			else if( ( wa >= i && wa <= i+wkt ) ){
 				if(last > i+wkt-lt )
 					term2+=wkt-lt < 0 ? 0 : wkt-lt;
@@ -89,7 +89,7 @@ double LateProfessor::getProbability(int wtt, int wkt, int lt, int ba, int wa) {
 	}
 	if(term3==0.0 && term2 == 0)return 0.0;
 	else if(term3==0.0 && term2 > 0) return 1.0;
-	
+
 	return (term2*1.0) / (term3*1.0);
 }
 
@@ -254,31 +254,31 @@ double test5() {
 int main() {
 	int time;
 	bool errors = false;
-	
+
 	time = test0();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test1();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test2();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test3();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test4();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test5();
 	if (time < 0)
 		errors = true;
-	
+
 	if (!errors)
 		cout <<"You're a stud (at least on the example cases)!" <<endl;
 	else

@@ -8,7 +8,7 @@ public class VacationTime
 {
 	public int bestSchedule(int N, int K, int[] w)
 	{
-		
+
 		int minn = 999999;
 		for(int i = 0 ; i+K-1 < N ;i++){
 			int yy =0;
@@ -22,18 +22,18 @@ public class VacationTime
 			}
 			minn = Math.min(yy,minn);
 		}
-		
+
 		return minn;
 	}
-	
+
 	public static void main(String[] args)
 	{
 		long time;
 		int answer;
 		boolean errors = false;
 		int desiredAnswer;
-		
-		
+
+
 		time = System.currentTimeMillis();
 		answer = new VacationTime().bestSchedule(3, 3, new int[]{2});
 		System.out.println("Time: " + (System.currentTimeMillis()-time)/1000.0 + " seconds");
@@ -114,8 +114,8 @@ public class VacationTime
 		else
 			System.out.println("Match :-)");
 		System.out.println();
-		
-		
+
+
 		if (errors)
 			System.out.println("Some of the test cases had errors :-(");
 		else

@@ -21,7 +21,7 @@ using namespace std;
 
 #define pb push_back
 #define all(v) v.begin(),v.end()
-#define sz(X)  ((int)(X.size())) 
+#define sz(X)  ((int)(X.size()))
 #define loop(i,m) for(int i=0;i<m;i++)
 #define loop2(i,m) for(i=0;i<m;i++)
 #define loop4(i,x,m) for(int i=x;i<m;i++)
@@ -46,7 +46,7 @@ public:
 };
 
 int ShorterSuperSum::calculate(int k, int n) {
-	
+
 }
 
 

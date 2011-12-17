@@ -22,7 +22,7 @@ using namespace std;
 
 #define pb push_back
 #define all(v) v.begin(),v.end()
-#define sz  size() 
+#define sz  size()
 #define loop(i,m) for(ui i=0;i<m;i++)
 #define loop2(i,m) for(i=0;i<m;i++)
 #define loop4m(i,x,m) for(ui i=x;i<m;i++)
@@ -57,17 +57,17 @@ int BusAwaiting::waitingTime(vector <string> buses, int at) {
 		str << buses[i];
 		str >> arr >> intr >> count;
 		str.clear();
-		
+
 		cout <<"aaaa: " << at <<"  "<<arr<<endl;
 		if(at  < arr){
 			if(arr-at < minn )minn = arr-at;
 		}
 		else if(at == arr)return 0;
-		
+
 		/*if(at > arr+intr*(count-1)){
 			return
 		}*/
-		
+
 		for(int j = arr ;j < arr+intr*(count-1);j+=intr){
 			cout << j << "  "<< at << "  "<<j+intr<<endl;
 			if (j == at )return 0;
@@ -79,9 +79,9 @@ int BusAwaiting::waitingTime(vector <string> buses, int at) {
 			}
 		}
 	}
-	
+
 	if(minn == INT_MAX)return -1;
-	
+
 	return minn;
 }
 
@@ -218,27 +218,27 @@ double test4() {
 int main() {
 	int time;
 	bool errors = false;
-	
+
 	time = test0();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test1();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test2();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test3();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test4();
 	if (time < 0)
 		errors = true;
-	
+
 	if (!errors)
 		cout <<"You're a stud (at least on the example cases)!" <<endl;
 	else

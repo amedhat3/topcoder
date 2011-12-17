@@ -21,7 +21,7 @@ using namespace std;
 
 #define pb push_back
 #define all(v) v.begin(),v.end()
-#define sz  size() 
+#define sz  size()
 #define loop(i,m) for(ui i=0;i<m;i++)
 #define loop2(i,m) for(i=0;i<m;i++)
 #define loop4m(i,x,m) for(ui i=x;i<m;i++)
@@ -51,13 +51,13 @@ bool isEq(string s, string t){
 	if(s.sz != t.sz)return false;
 	int ssiz = s.sz;
 	for(int i = ssiz-1 ; i >= 0;i--){
-		if( 
+		if(
 		(s[i]=='A' && t[ssiz-i-1] == 'T')
 		|| (s[i]=='T' && t[ssiz-i-1] == 'A')
 		|| (s[i]=='C' && t[ssiz-i-1] == 'G')
 		|| (s[i]=='G' && t[ssiz-i-1] == 'C')
 		){
-		
+
 		}
 		else{
 			return false;
@@ -153,19 +153,19 @@ double test2() {
 int main() {
 	int time;
 	bool errors = false;
-	
+
 	time = test0();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test1();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test2();
 	if (time < 0)
 		errors = true;
-	
+
 	if (!errors)
 		cout <<"You're a stud (at least on the example cases)!" <<endl;
 	else

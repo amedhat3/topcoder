@@ -22,7 +22,7 @@ using namespace std;
 
 #define pb push_back
 #define all(v) v.begin(),v.end()
-#define sz  size() 
+#define sz  size()
 #define loop(i,m) for(ui i=0;i<m;i++)
 #define loop2(i,m) for(i=0;i<m;i++)
 #define loop4m(i,x,m) for(ui i=x;i<m;i++)
@@ -61,10 +61,10 @@ double solve(int x,int y,int s){
 double res=1.0;
 	loop(i,s){
 	if(step(x,y)){
-		res+= solve(x+1,y,s-1)+		
+		res+= solve(x+1,y,s-1)+
 		solve(x-1,y,s-1)+
 		solve(x,y+1,s-1)+
-		solve(x,y-1,s-1);	
+		solve(x,y-1,s-1);
 	}
 	else{
 		b[x][y] = 0;
@@ -217,27 +217,27 @@ double test4() {
 int main() {
 	int time;
 	bool errors = false;
-	
+
 	time = test0();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test1();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test2();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test3();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test4();
 	if (time < 0)
 		errors = true;
-	
+
 	if (!errors)
 		cout <<"You're a stud (at least on the example cases)!" <<endl;
 	else

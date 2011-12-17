@@ -34,15 +34,15 @@ public class ConcatenateNumber
 		}
 		return -1;
 	}
-	
+
 	public static void main(String[] args)
 	{
 		long time;
 		int answer;
 		boolean errors = false;
 		int desiredAnswer;
-		
-		
+
+
 		time = System.currentTimeMillis();
 		answer = new ConcatenateNumber().getSmallest(2, 9);
 		System.out.println("Time: " + (System.currentTimeMillis()-time)/1000.0 + " seconds");
@@ -123,8 +123,8 @@ public class ConcatenateNumber
 		else
 			System.out.println("Match :-)");
 		System.out.println();
-		
-		
+
+
 		if (errors)
 			System.out.println("Some of the test cases had errors :-(");
 		else

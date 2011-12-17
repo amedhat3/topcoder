@@ -8,9 +8,9 @@ public class CarelessSecretary
 {
 	public int howMany(int N, int K)
 	{
-		
+
 	}
-	
-	
+
+
 }
 //Powered by [KawigiEdit] 2.0!

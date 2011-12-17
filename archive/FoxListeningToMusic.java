@@ -8,18 +8,18 @@ public class FoxListeningToMusic
 {
 	public double[] getProbabilities(int[] length, int T)
 	{
-		
+
 	}
-	
+
 	public static void main(String[] args)
 	{
 		long time;
 		double[] answer;
 		boolean errors = false;
 		double[] desiredAnswer;
-		
+
 		boolean same;
-		
+
 		time = System.currentTimeMillis();
 		answer = new FoxListeningToMusic().getProbabilities(new int[]{1, 2}, 1);
 		System.out.println("Time: " + (System.currentTimeMillis()-time)/1000.0 + " seconds");
@@ -200,8 +200,8 @@ public class FoxListeningToMusic
 		else
 			System.out.println("Match :-)");
 		System.out.println();
-		
-		
+
+
 		if (errors)
 			System.out.println("Some of the test cases had errors :-(");
 		else

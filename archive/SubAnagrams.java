@@ -8,16 +8,16 @@ public class SubAnagrams
 {
 	String s="";
 	//boolean best[][][] = new boolean[500][500][500];
-	
+
 	public int maximumParts(String[] sw){
-		
+
  		StringBuilder sb = new StringBuilder();
 		for(int i=0;i<sw.length;i++){
 			sb.append(sw[i]);
 		}
 		s = sb.toString();
 		int res = 1;
-		
+
 		/*for (int i = 0; i < best.length; i++) {
 			for (int j = 0; j < best[i].length; j++) {
 				for (int k = 0; k < best[i][j].length; k++) {
@@ -29,7 +29,7 @@ public class SubAnagrams
 			for(int j = i*2 ; j <= s.length() ; j++)
 			res = Math.max(res, 1+solve(0,i,j));
 		}
-		
+
 		return res;
 	}
 	private int solve(int firstIndex , int middleIndex , int lastIndex){
@@ -51,10 +51,10 @@ public class SubAnagrams
 		}
 		return res;
 	}
-	
-	
+
+
 	private boolean validate(String str1,String str2){
-		
+
 		boolean f[] = new boolean[str2.length()];
 		Arrays.fill(f, true);
 		int i =0,j=0;
@@ -82,8 +82,8 @@ public class SubAnagrams
 		int answer;
 		boolean errors = false;
 		int desiredAnswer;
-		
-		
+
+
 		time = System.currentTimeMillis();
 		answer = new SubAnagrams().maximumParts(new String[]{"ABABAB"});
 		System.out.println("Time: " + (System.currentTimeMillis()-time)/1000.0 + " seconds");
@@ -148,7 +148,7 @@ public class SubAnagrams
 		else
 			System.out.println("Match :-)");
 		System.out.println();
-		
+
 		time = System.currentTimeMillis();
 		answer = new SubAnagrams().maximumParts(new String[]{"QRQSRQRRQSSQSRRQSRRRQQSRSSQQRQSRQQRSRSQQSRRSRRRQRR","QRQQQQSSSSQQRRQRQQRRSQQRSQRRRSQRSSRQQRRQRQSQQQRRQR"});
 		System.out.println("Time: " + (System.currentTimeMillis()-time)/1000.0 + " seconds");
@@ -165,13 +165,13 @@ public class SubAnagrams
 		else
 			System.out.println("Match :-)");
 		System.out.println();
-		
-		
+
+
 		if (errors)
 			System.out.println("Some of the test cases had errors :-(");
 		else
 			System.out.println("You're a stud (at least on the test data)! :-D ");
-		
+
 		List <String> sss = new ArryList<String>();
 		sss.toArray(String.class);
 	}

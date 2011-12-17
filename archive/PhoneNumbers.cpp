@@ -22,7 +22,7 @@ using namespace std;
 
 #define pb push_back
 #define all(v) v.begin(),v.end()
-#define sz  size() 
+#define sz  size()
 #define loop(i,m) for(ui i=0;i<m;i++)
 #define loop2(i,m) for(i=0;i<m;i++)
 #define loop4m(i,x,m) for(ui i=x;i<m;i++)
@@ -60,7 +60,7 @@ string PhoneNumbers::bestNumber(string n) {
 			q+=2;
 		}
 	}
-	
+
 	for(int i =0 ; i < n.sz-1;i++){
 		if( us[i] || us[i+1] || us[i+2] != 1){
 			if(n[i]==n[i+2]){
@@ -72,7 +72,7 @@ string PhoneNumbers::bestNumber(string n) {
 			}
 		}
 	}
-	
+
 	cout <<q<<endl;
 	return "";
 }
@@ -192,27 +192,27 @@ double test4() {
 int main() {
 	int time;
 	bool errors = false;
-	
+
 	time = test0();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test1();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test2();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test3();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test4();
 	if (time < 0)
 		errors = true;
-	
+
 	if (!errors)
 		cout <<"You're a stud (at least on the example cases)!" <<endl;
 	else

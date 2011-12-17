@@ -9,18 +9,18 @@ public class SpaceshipEvacuation
 	public int additionalCabins(int N, String[] tunnelNetwork, int crewSize)
 	{
 		System.out.println("helloooo java");
-		
+
 		return 5;
 	}
-	
+
 	public static void main(String[] args)
 	{
 		long time;
 		int answer;
 		boolean errors = false;
 		int desiredAnswer;
-		
-		
+
+
 		time = System.currentTimeMillis();
 		answer = new SpaceshipEvacuation().additionalCabins(3, new String[]{"0 1 5 3", "2 1 0 0"}, 5);
 		System.out.println("Time: " + (System.currentTimeMillis()-time)/1000.0 + " seconds");
@@ -101,8 +101,8 @@ public class SpaceshipEvacuation
 		else
 			System.out.println("Match :-)");
 		System.out.println();
-		
-		
+
+
 		if (errors)
 			System.out.println("Some of the test cases had errors :-(");
 		else

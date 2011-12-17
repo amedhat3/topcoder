@@ -21,7 +21,7 @@ using namespace std;
 
 #define pb push_back
 #define all(v) v.begin(),v.end()
-#define sz  size() 
+#define sz  size()
 #define loop(i,m) for(ui i=0;i<m;i++)
 #define loop2(i,m) for(i=0;i<m;i++)
 #define loop4m(i,x,m) for(ui i=x;i<m;i++)
@@ -57,9 +57,9 @@ int nsumm(vs g,int x,int y){
 			if(i==0 && j==0)continue;
 
 			if(x+i < 0 || y+j < 0 || x+i >= maxx || y+j >= maxy )continue;
-				
+
 			summ += g[x+i][y+j]-'0';
-			
+
 		}
 	return summ;
 }
@@ -67,19 +67,19 @@ int nsumm(vs g,int x,int y){
 vs move(vs g){
 	int summ=0;
 	vs g2;
-	
+
 	g2.resize(maxx);
 	loop(i,maxx)g2[i].resize(maxy);
 
-				
+
 	for(int i = 0 ; i < maxx;i++ )
 		for(int j = 0 ; j < maxy;j++ ){
-			
+
 			summ = nsumm(g,i,j);
 
 			if(g[i][j]=='1'){
 				if(summ < 2 || summ > 3){
-					g2[i][j]='0';		
+					g2[i][j]='0';
 				}
 				else{
 					g2[i][j]='1';
@@ -104,10 +104,10 @@ int FuzzyLife::survivingCells(vector <string> g) {
 	int unc=0;
 	vi un;
 	int count=0;
-	
+
 	maxx=g.sz;
 	if(g.sz>0)maxy=g[0].sz;
-		
+
 	for(int i =0;i < maxx ; i++){
 		for(int j =0;j<maxy;j++){
 			if(g[i][j]=='?'){
@@ -116,14 +116,14 @@ int FuzzyLife::survivingCells(vector <string> g) {
 			}
 		}
 	}
-	
+
 	for(int i =0;i < maxx ; i++){
 		for(int j =0;j<maxy;j++){
 			cout << g[i][j]<<"  ";
 		}
 		cout <<endl;
 	}
-	
+
 	g = move(g);
 	cout <<"-----------------"<<endl;
 	for(int i =0;i < maxx ; i++){
@@ -132,30 +132,30 @@ int FuzzyLife::survivingCells(vector <string> g) {
 		}
 		cout <<endl;
 	}
-	
+
 	for(int i =0;i < maxx ; i++){
 		for(int j =0;j<maxy;j++){
 			if(g[i][j]=='1')count++;
 		}
 	}
-	
+
 	//un.resize(unc);
-	
+
 	/*for(int i =0;i < ii ; i++){
 		for(int j =0;j<jj;j++){
-			
+
 		}
 	}*/
-	
+
 	/*vpii mpp;
 	mpp.resize(unc);
-	
+
 	loop(i,unc){
 		mpp[i].first=0;
 		mpp[i].second=0;
 	}*/
 
-	
+
 	return count;
 }
 
@@ -315,31 +315,31 @@ double test5() {
 int main() {
 	int time;
 	bool errors = false;
-	
+
 	time = test0();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test1();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test2();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test3();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test4();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test5();
 	if (time < 0)
 		errors = true;
-	
+
 	if (!errors)
 		cout <<"You're a stud (at least on the example cases)!" <<endl;
 	else

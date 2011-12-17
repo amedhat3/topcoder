@@ -21,7 +21,7 @@ using namespace std;
 
 #define pb push_back
 #define all(v) v.begin(),v.end()
-#define sz  size() 
+#define sz  size()
 #define loop(i,m) for(ui i=0;i<m;i++)
 #define loop2(i,m) for(i=0;i<m;i++)
 #define loop4m(i,x,m) for(ui i=x;i<m;i++)
@@ -75,7 +75,7 @@ int x1,y1,x2,y2;
 			}
 		}
 	}
-	
+
 	for(int i = -1 ; i<=1;i++ ){
 		for(int j = -1 ; i <= 1 ; j++){
 			if(i==0 && j == 0)continue;
@@ -87,7 +87,7 @@ int x1,y1,x2,y2;
 			}
 		}
 	}
-	
+
 	if(what) act[x2][y2]=true;
 	else{
 		act[x1][y1]=true;
@@ -99,8 +99,8 @@ int DoorsGame::determineOutcome(string doors, int trophy) {
 	rr= grid.sz;
 	if(rr > 0)cc= grid[0].sz;
 	else cc =0;
-	
-	
+
+
 	act.resize(rr);
 	loop(i,rr){
 		act[i].resize(cc);
@@ -108,9 +108,9 @@ int DoorsGame::determineOutcome(string doors, int trophy) {
 			act[i]=false;
 		}
 	}
-	
+
 	act[0][0]=true;
-	
+
 	return solve(0,0);
 }
 
@@ -280,35 +280,35 @@ double test6() {
 int main() {
 	int time;
 	bool errors = false;
-	
+
 	time = test0();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test1();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test2();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test3();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test4();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test5();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test6();
 	if (time < 0)
 		errors = true;
-	
+
 	if (!errors)
 		cout <<"You're a stud (at least on the example cases)!" <<endl;
 	else
