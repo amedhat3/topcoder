@@ -3,7 +3,7 @@
 <ul><li>John arrives at time 0.</li>
 <li>John waits for Dr. Wesley to arrive.</li>
 <li>If after <b>waitTime</b> seconds Dr. Wesley has not arrived yet, John goes to take a walk for <b>walkTime</b> seconds.</li>
-<li>John therefore arrives back to the classroom exactly at time <b>waitTime</b> + <b>walkTime</b>.</li> 
+<li>John therefore arrives back to the classroom exactly at time <b>waitTime</b> + <b>walkTime</b>.</li>
 <li>If Dr. Wesley has not arrived yet, John waits another <b>waitTime</b> seconds and then proceeds to take a new walk. The process is repeated until John becomes aware that Dr. Wesley has arrived.</li>
 </ul>
 Overall, John stands in front of the class door from time 0 to time <b>waitTime</b>, inclusive, then from time <b>walkTime</b> + <b>waitTime</b> to time <b>walkTime</b> + 2*<b>waitTime</b>, inclusive, and so on. At all other time moments he walks outside.

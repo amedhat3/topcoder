@@ -21,7 +21,7 @@ using namespace std;
 
 #define pb push_back
 #define all(v) v.begin(),v.end()
-#define sz  size() 
+#define sz  size()
 #define loop(i,m) for(ui i=0;i<m;i++)
 #define loop2(i,m) for(i=0;i<m;i++)
 #define loop4m(i,x,m) for(ui i=x;i<m;i++)
@@ -50,33 +50,33 @@ int mx,my;
 
 int SumRectangle::getCorner(vector <int> l, vector <int> t) {
 	vvi grid;
-	
+
 	my = l.sz;
 	mx = t.sz;
 	cout << mx << "  "<< my<<endl;
 	grid.resize(my);
-	
+
 	loop(i,my){
 		grid[i].resize(mx);
 	}
-	
+
 	loop(i,my){
-			grid[i][0]= l[i]; 
+			grid[i][0]= l[i];
 	}
-	
+
 	loop(i,mx){
-			grid[0][i]= t[i]; 
+			grid[0][i]= t[i];
 	}
-	
+
 	for(int i=1;i <my;i++){
 		for(int j=1;j<mx;j++){
 			grid[i][j] = grid[i-1][j-1]-grid[i-1][j]-grid[i][j-1];
 		}
 	}
-	
+
 	return grid[my-1][mx-1];
-	
-	
+
+
 }
 
 
@@ -159,19 +159,19 @@ double test2() {
 int main() {
 	int time;
 	bool errors = false;
-	
+
 	time = test0();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test1();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test2();
 	if (time < 0)
 		errors = true;
-	
+
 	if (!errors)
 		cout <<"You're a stud (at least on the example cases)!" <<endl;
 	else

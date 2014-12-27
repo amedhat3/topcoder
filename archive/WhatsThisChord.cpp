@@ -22,7 +22,7 @@ using namespace std;
 
 #define pb push_back
 #define all(v) v.begin(),v.end()
-#define sz  size() 
+#define sz  size()
 #define loop(i,m) for(ui i=0;i<m;i++)
 #define loop2(i,m) for(i=0;i<m;i++)
 #define loop4m(i,x,m) for(ui i=x;i<m;i++)
@@ -52,7 +52,7 @@ string WhatsThisChord::classify(vector <int> c) {
 	all.pb("C");
 	all.pb("C#");
 	all.pb("D");
-	all.pb("D#");	 
+	all.pb("D#");
 	all.pb("E");
 	all.pb("F");
 	all.pb("F#");
@@ -61,7 +61,7 @@ string WhatsThisChord::classify(vector <int> c) {
 	all.pb("A");
 	all.pb("A#");
 	all.pb("B");
-	
+
 	vs strl;
 	strl.pb("E");
 	strl.pb("A");
@@ -69,7 +69,7 @@ string WhatsThisChord::classify(vector <int> c) {
 	strl.pb("G");
 	strl.pb("B");
 	strl.pb("E");
-	
+
 	set <string> res;
 	int i=0;
 	string sss="";
@@ -85,14 +85,14 @@ string WhatsThisChord::classify(vector <int> c) {
 		sss="";
 	}
 	set<string>::iterator it;
-	
+
 	vs fres;
 	for (it=res.begin(); it!=res.end(); it++){
 		fres.pb(*it);
 	}
-	
+
 	vs f2;
-	
+
 	loop(i,all.sz)
 	loop(j,fres.sz){
 		if(all[i].compare(fres[j])==0){
@@ -100,19 +100,19 @@ string WhatsThisChord::classify(vector <int> c) {
 			cout << f2[f2.sz-1]<<endl;
 		}
 	}
-		
+
 	if(f2.sz != 3 ){
 		return "";
 	}
-	
-	
+
+
 	int plus=0;
 	loop(j,all.sz){
 		if(f2[0].compare(all[j])==0){
 			plus = j;
 		}
 	}
-	
+
 	int cc=0;
 	loop(j,all.sz){
 		if(f2[1].compare(all[j])==0){
@@ -129,9 +129,9 @@ string WhatsThisChord::classify(vector <int> c) {
 			}
 		}
 	}
-	
+
 	cout <<cc<<endl;
-	
+
 	if(cc==2){
 		return f2[0]+" Major";
 	}
@@ -332,39 +332,39 @@ double test7() {
 int main() {
 	int time;
 	bool errors = false;
-	
+
 	time = test0();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test1();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test2();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test3();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test4();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test5();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test6();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test7();
 	if (time < 0)
 		errors = true;
-	
+
 	if (!errors)
 		cout <<"You're a stud (at least on the example cases)!" <<endl;
 	else

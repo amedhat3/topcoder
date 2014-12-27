@@ -21,7 +21,7 @@ using namespace std;
 
 #define pb push_back
 #define all(v) v.begin(),v.end()
-#define sz  size() 
+#define sz  size()
 #define loop(i,m) for(ui i=0;i<m;i++)
 #define loop2(i,m) for(i=0;i<m;i++)
 #define loop4m(i,x,m) for(ui i=x;i<m;i++)
@@ -55,12 +55,12 @@ ui n;
 //bool best[10000][10000];
 
 bool solve(int s,int t){
-	
+
 	//if(best[s][t]!=-1)return best[s][t];
-	
+
 	if(s >= num.sz)return true;
 	if(t >= num.sz)return false;
-	
+
 	if(sol[t])return solve(s,t+1);
 	if(t == n && s == t)return solve(s,t+1);
 
@@ -71,21 +71,21 @@ bool solve(int s,int t){
 		//best[s][t]=1;
 		//return true;
 	}
-	
+
 	return solve(s,t+1);
 }
 
 vector <int> PrimePairs::matches(vector <int> numbers) {
 	vi res;
 	res.clear();
-	
+
 	num = numbers;
 	prm  = new bool[10000];
 	loop(i,10000){
 		prm[i]=1;
 		//loop(j,10000)best[i][j]=-1;
 	}
-	
+
 	prm[0]=0;
 	prm[1]=0;
 	prm[2]=0;
@@ -108,7 +108,7 @@ vector <int> PrimePairs::matches(vector <int> numbers) {
 		sol.clear();
 		sol.resize(num.sz);
 		fill(all(sol),0);
-		
+
 		bool fail=false;
 		if(prm[num[0]+num[i]]){
 			cout << num[i] <<endl;
@@ -337,27 +337,27 @@ double test4() {
 int main() {
 	int time;
 	bool errors = false;
-	
+
 	time = test0();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test1();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test2();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test3();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test4();
 	if (time < 0)
 		errors = true;
-	
+
 	if (!errors)
 		cout <<"You're a stud (at least on the example cases)!" <<endl;
 	else

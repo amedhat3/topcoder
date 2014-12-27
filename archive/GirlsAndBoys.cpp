@@ -21,7 +21,7 @@ using namespace std;
 
 #define pb push_back
 #define all(v) v.begin(),v.end()
-#define sz  size() 
+#define sz  size()
 #define loop(i,m) for(ui i=0;i<m;i++)
 #define loop2(i,m) for(i=0;i<m;i++)
 #define loop4m(i,x,m) for(ui i=x;i<m;i++)
@@ -59,7 +59,7 @@ char mchar;
 	int c2=0;
 	int c3=0;
 	int c4=0;
-	
+
 	int m=0;
 	for(int i = 1 ; i < row.sz ; i ++){
 		m=i;
@@ -76,7 +76,7 @@ char mchar;
 			}
 		}
 	}
-	
+
 	for(int i = row.sz-2 ; i >= 0 ; i --){
 		if(s2[i]==mchar){
 			m=i;
@@ -94,7 +94,7 @@ char mchar;
 			}
 		}
 	}
-	
+
 	mchar = 'B';
 	s1=row;
 	s2=row;
@@ -113,7 +113,7 @@ char mchar;
 			}
 		}
 	}
-	
+
 	for(int i = row.sz-2 ; i >= 0 ; i --){
 		if(s2[i]==mchar){
 			m=i;
@@ -227,23 +227,23 @@ double test3() {
 int main() {
 	int time;
 	bool errors = false;
-	
+
 	time = test0();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test1();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test2();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test3();
 	if (time < 0)
 		errors = true;
-	
+
 	if (!errors)
 		cout <<"You're a stud (at least on the example cases)!" <<endl;
 	else

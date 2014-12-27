@@ -22,7 +22,7 @@ using namespace std;
 
 #define pb push_back
 #define all(v) v.begin(),v.end()
-#define sz  size() 
+#define sz  size()
 #define loop(i,m) for(ui i=0;i<m;i++)
 #define loop2(i,m) for(i=0;i<m;i++)
 #define loop4m(i,x,m) for(ui i=x;i<m;i++)
@@ -54,11 +54,11 @@ vvi g;
 vector< vector<bool> > act;
 
 int solve( int x, int y ){
-	
+
 	cout <<x<<" "<<y<<endl;
-	
+
 	if (x > cc || y > rr || x < 0 || y < 0)return 0;
-	
+
 	int maxx = 0;
 	int res;
 	for(int i = -1 ; i<=1;i++ ){
@@ -74,16 +74,16 @@ int solve( int x, int y ){
 			}
 		}
 	}
-	
+
 	return maxx;
 }
 
 int ActivateGame::findMaxScore(vector <string> grid) {
-	
+
 	rr= grid.sz;
 	if(rr > 0)cc= grid[0].sz;
 	else cc =0;
-	
+
 	act.resize(rr);
 	g.resize(rr);
 	loop(i,rr){
@@ -96,9 +96,9 @@ int ActivateGame::findMaxScore(vector <string> grid) {
 			act[i].pb(false);
 		}
 	}
-	
+
 	act[0][0]=true;
-	
+
 return solve(0,0);
 //	return 5;
 }
@@ -205,23 +205,23 @@ double test3() {
 int main() {
 	int time;
 	bool errors = false;
-	
+
 	time = test0();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test1();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test2();
 	if (time < 0)
 		errors = true;
-	
+
 	time = test3();
 	if (time < 0)
 		errors = true;
-	
+
 	if (!errors)
 		cout <<"You're a stud (at least on the example cases)!" <<endl;
 	else

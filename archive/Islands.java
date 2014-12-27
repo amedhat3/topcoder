@@ -16,34 +16,34 @@ public class Islands
 					if( j>0 && kdm[i].charAt(j-1) == '.')ans++;
 					if( j<kdm[i].length()-1 && kdm[i].charAt(j+1)=='.')ans++;
 					if( i < kdm.length-1 && kdm[i+1].charAt(j)=='.')ans++;
-					
+
 					if(i>0 && j > 0 && kdm[i-1].charAt(j-1)=='.' && i % 2 == 0){
 						ans ++;
 					}
 					if(i > 0 && j < kdm[i].length()-1 && kdm[i-1].charAt(j+1) == '.' && i % 2 != 0){
 						ans ++;
 					}
-					
+
 					if(i < kdm.length-1 && j > 0 && kdm[i+1].charAt(j-1)=='.' && i % 2 == 0){
 						ans ++;
 					}
 					if(i < kdm.length-1 && j < kdm[i].length()-1 && kdm[i+1].charAt(j+1)=='.' && i % 2 != 0){
 						ans ++;
-					}					
+					}
 				}
 			}
 		}
 		return ans;
 	}
-	
+
 	public static void main(String[] args)
 	{
 		long time;
 		int answer;
 		boolean errors = false;
 		int desiredAnswer;
-		
-		
+
+
 		time = System.currentTimeMillis();
 		answer = new Islands().beachLength(new String[]{".#...#.."});
 		System.out.println("Time: " + (System.currentTimeMillis()-time)/1000.0 + " seconds");
@@ -108,8 +108,8 @@ public class Islands
 		else
 			System.out.println("Match :-)");
 		System.out.println();
-		
-		
+
+
 		if (errors)
 			System.out.println("Some of the test cases had errors :-(");
 		else
